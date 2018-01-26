@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TruckMonitoring</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/vendor/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <main role="main">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Truck Simulator</h1>
+        <p class="lead text-muted">
+          This UI is just to simulate the refrigerated truck.
+        </p>
+        <p>
+          The user can add/remove containers to the truck and simulate changes in the temperature opening the container`s door.
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary my-2" data-toggle="modal" data-target="#add-container">Add container</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="py-5">
+      <div class="container">
+        <div class="row" id="containers"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="add-container" tabindex="-1" role="dialog" aria-labelledby="add-container" aria-hidden="true"></div>
+
+  <script src="/js/vendor/jquery.min.js"></script>
+  <script src="/js/vendor/bootstrap.min.js"></script>
+  <script>window.apiUrl = '<%= apiUrl %>';</script>
+  <script data-main="/js/app/init" src="js/vendor/require.js"></script>
+</body>
+
+</html>

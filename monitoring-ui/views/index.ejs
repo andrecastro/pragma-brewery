@@ -1,0 +1,27 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TruckMonitoring</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/vendor/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+    
+    <main role="main">
+      <div class="py-5">
+        <div class="container" id="containers"></div>
+      </div>
+    </main>
+ 
+    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
+    
+    <input type="hidden" id="agent-url" value="<%= agentUrl %>">
+    <script data-main="/js/app/init" src="js/vendor/require.js"></script>
+</body>
+</html>  

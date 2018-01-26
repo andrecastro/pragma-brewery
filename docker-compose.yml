@@ -1,0 +1,26 @@
+version: "3"
+services:
+  monitoring-ui:
+    image: pragma-brewery/monitoring-ui
+    build:
+      context: monitoring-ui
+    ports:
+      - "3000:3000"
+  monitoring-agent:
+    image: pragma-brewery/monitoring-agent
+    build:
+      context: monitoring-agent
+    ports:
+      - "3001:3001"
+  truck-api:
+    image: pragma-brewery/truck-api
+    build:
+      context: truck-api
+    ports:
+      - "3002:3002"
+  truck-ui:
+    image: pragma-brewery/truck-ui
+    build:
+      context: truck-ui
+    ports:
+      - "3003:3003"

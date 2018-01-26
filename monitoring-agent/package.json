@@ -1,0 +1,22 @@
+{
+  "name": "MonitoringAgent",
+  "version": "0.0.1",
+  "description": "Agent to monitor the containers in the truck",
+  "main": "app.js",
+  "author": "Andre Castro",
+  "license": "MIT",
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha tests/** tests/**/*"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-string": "^1.4.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0",
+    "sinon": "^4.2.1"
+  }
+}

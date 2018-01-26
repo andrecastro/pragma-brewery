@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title"><%=container.beer.name%> - <%= container.beer.type %></h5>
+            <button type="button" class="close remove">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
+                style="height: 225px; width: 100%; display: block; padding: 10px" src="/images/beer2.svg"
+                data-holder-rendered="true">
+        </div>
+        <div class="modal-footer">
+            <span>Current temperature: <%= container.currentTemperature %> °C</span>
+            <div class="btn-group">
+                <button type="button" class="increase btn btn-sm btn-outline-secondary">+</button>
+                <button type="button" class="decrease btn btn-sm btn-outline-secondary">-</button>
+            </div>
+        </div>
+    </div>
+</div>

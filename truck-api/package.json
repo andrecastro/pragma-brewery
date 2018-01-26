@@ -1,0 +1,25 @@
+{
+  "name": "truck-api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha tests/** tests/**/*"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-string": "^1.4.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0",
+    "sinon": "^4.2.1"
+  }
+}

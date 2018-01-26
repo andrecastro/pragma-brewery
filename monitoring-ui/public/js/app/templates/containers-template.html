@@ -1,0 +1,31 @@
+<div class="row">
+    <% for(var index = 0; index < containers.length; index++) { %>
+        <% var container = containers[index]; %>
+
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+
+                <% if(container.isHealthy) { %>
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
+                    style="height: 225px; width: 100%; display: block;" src="/images/healthy.png"
+                    data-holder-rendered="true">
+                <% } else { %>
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"
+                    style="height: 225px; width: 100%; display: block;" src="/images/unhealthy.png"
+                    data-holder-rendered="true">
+                <% } %>
+                
+                <div class="card-body">
+                    <p class="card-text">
+                        Current temperature: <%= container.currentTemperature %>°C
+                    </p>
+
+                    <p class="card-text">
+                        Beer: <%= container.beer.type %>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <% } %>
+</div>
