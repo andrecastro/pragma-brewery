@@ -25,10 +25,8 @@ var healthChecker = new HealthChecker();
  * When the client connect, send the last data available
  */
 wss.on('connection', (ws, req) => {
-
   var lastData = service.lastData();
-  console.log('Last data')
-  console.log(lastData);
+
   if (lastData) {
     var checkedContainers = healthChecker.check(lastData.containers);
     ws.send(JSON.stringify({ containers: checkedContainers }));

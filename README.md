@@ -11,7 +11,7 @@ Pragama Brewry is a system to monitor the temperature of containers inside a ref
 
 ![Architecture](./architecture.jpg)
 
-The architecture was based in other monitoring systems (e.g. Prometheus) where there is a agent scraping a metrics endpoint of a service and pushing the information to clients conected to the agent.
+The architecture is based in other monitoring systems (e.g. Prometheus), where an agent scraps a  service's metrics a and push the information to clients connected to it.
 
 ##### Monitoring agent
 
@@ -34,13 +34,22 @@ The truck UI is a microservice responsible for communicating with the truck API 
 To run the application you will need to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed in your machine.
 
 ```sh
-$ git clone <repo_url>
-$ cd pragmabrewery
+$ cd pragma-brewery
 $ ./run.sh
 ```
 
 > **Note:** The compose file is configured to use the ports 3000, 3001, 3002, 3003. Make sure you have them enabled in your Docker Machine to access them using localhost. 
 You can also change the compose file, but make sure you change the enviroment variables of each service to make them reachable by each other.
+
+### Running the tests
+
+```sh
+$ cd pragma-brewery
+$ cd <any-folder>
+$ ./run.sh yarn install (first time only)
+$ ./run.sh yarn test
+```
+> **Note:** You do not need to have yarn installed in your machine, the script run.sh executes a docker image with the same image that the app runs, so you can execute any command with it.
 
 ### Question/Assumptions
 
@@ -61,5 +70,3 @@ The use of WebSocket to show the information in realtime could be considered a h
 - Save data in a real database to filter data by time;
     - This would be useful to show the data in a chart for instance;
 - Add more than one type of beer in a container;
-
-

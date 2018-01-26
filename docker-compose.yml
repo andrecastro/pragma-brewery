@@ -6,12 +6,17 @@ services:
       context: monitoring-ui
     ports:
       - "3000:3000"
+    environment:
+      - MONITOR_AGENT_ADDR=ws://localhost:3001
   monitoring-agent:
     image: pragma-brewery/monitoring-agent
     build:
       context: monitoring-agent
     ports:
       - "3001:3001"
+    environment:
+      - TARGET_ENDPOINT=http://truck-api:3002/metrics
+      - INTERVAL_IN_SECONDS=5
   truck-api:
     image: pragma-brewery/truck-api
     build:
@@ -24,3 +29,5 @@ services:
       context: truck-ui
     ports:
       - "3003:3003"
+    environment:
+      - TRUCK_API_ADDR=http://localhost:3002
